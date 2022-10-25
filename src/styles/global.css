@@ -1,0 +1,61 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Recursive:wght,CASL,CRSV,MONO@1000,1,0,0.02&display=swap'); */
+/* font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Recursive', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV@-15..0,300..1000,1,0&display=swap');
+:root {
+  --textWidth: 64ch;
+  --dark: hsl(0, 0%, 14%);
+  --darkContrast: #483c32; /* Taupe */
+  --light: hsl(0, 0%, 86%);
+  --lightContrast: #f4f0ec; /*  Isabelline */
+  --accent: darkgoldenrod;
+  --accentHover: goldenrod;
+  --fuck: firebrick;
+  /* Bronze Hex #CD7F32 - similar to dark goldenrod*/
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: var(--dark);
+  color: var(--light);
+  /* font-size: 20px; */
+  /* https://zellwk.com/blog/viewport-based-typography/ */
+  font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  /* https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+  /* font-size: calc(8px + (26 - 8) * (100vw - 400px) / (800 - 400)); */
+}
+body {
+  font-family: 'Recursive';
+}
+main {
+  width: 66vw;
+}
+a,
+a:link,
+a:visited {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accentHover);
+  text-decoration-color: var(--accent);
+  text-decoration-style: dashed;
+}
+/* https://practicaltypography.com/headings.html */
+h1 {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #b8860b;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: #c69609;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #d4a607;
+}
