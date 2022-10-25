@@ -1,0 +1,46 @@
+---
+// import { marked } from 'marked';
+import snarkdown from 'snarkdown'
+
+const { author, id, note, tags, text } = Astro.props
+---
+
+<div>
+  <a href={`/quotes/${id}`} set:html={snarkdown(text)} />
+</div>
+<br />
+{' — '}
+<a href={`/author/${author.toLowerCase().trim()}`}>{author}</a>
+{
+  note && (
+    <>
+      «<span set:html={snarkdown(note.trim())} />»
+    </>
+  )
+}
+<br />
+{
+  tags.map((tag: any, i: number) => (
+    <>
+      #<a href={`/tag/${tag.toLowerCase().trim()}`}>{tag}</a>
+      {i + 1 < tags.length && <>, </>}
+    </>
+  ))
+}
+<style>
+  div {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  div a,
+  div a:link {
+    color: var(--light);
+    text-decoration: none;
+  }
+  div a:hover {
+    color: var(--accentHover);
+  }
+  span {
+    color: var(--light);
+  }
+</style>
