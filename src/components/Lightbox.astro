@@ -1,0 +1,52 @@
+---
+const { file, caption } = Astro.props
+---
+
+<a href={`#${file}`}>
+  <img class={file} src={file} />
+</a>
+
+<a href="#" class="lightbox" id={file}>
+  <figure>
+    <img alt="" width={512} height={512} class={file} src={file} />
+    <figcaption>{caption}</figcaption>
+  </figure>
+</a>
+
+<style>
+  img {
+    /* width: 26vw; */
+    width: 32.5%;
+    margin: 0 2px;
+    padding: 7px;
+    border: 1px solid silver; /**/
+  }
+  figcaption {
+    color: var(--light);
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .lightbox {
+    /* hides until :target gets activated */
+    display: none;
+    /* makes full screen overlay when :target */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark);
+  }
+  .lightbox:target {
+    /*:target means when #first in URL matches an ID. */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+  }
+  .lightbox img {
+    height: 66vh;
+    width: auto;
+    padding: 0.7vw;
+    border: 1px solidn silver; /**/
+  }
+</style>
