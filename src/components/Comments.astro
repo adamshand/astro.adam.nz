@@ -1,0 +1,121 @@
+---
+import md5 from 'md5'
+
+const { debug = false } = Astro.props
+
+const data = await fetch(
+  `https://pb.haume.nz/api/collections/comments/records?sort=-created&filter=(path='${Astro.url.pathname}')`,
+)
+const { items: comments } = await data.json()
+---
+
+<h3>Leave a comment?</h3>
+<form>
+  <div>
+    <span>
+      <label for="author">Name:</label>
+      <input
+        type="text"
+        name="author"
+        placeholder="Captain Angry Pants"
+        value=""
+      />
+    </span>
+    <span>
+      <label for="email">E-mail:</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="captain@angry.pants"
+        value=""
+      />
+    </span>
+  </div>
+  <textarea
+    rows="5"
+    minlength="3"
+    maxlength="65535"
+    placeholder="Type Comment Here (at least 3 chars)"
+    spellcheck="false"></textarea>
+  <div>
+    <span>
+      <label for="website">Website:</label>
+      <input
+        type="text"
+        name="website"
+        placeholder="http://www.angry.pants"
+        value=""
+      />
+    </span>
+    <span>
+      <input type="submit" value="Submit" />
+      <input type="button" name="preview" value="Preview" />
+    </span>
+  </div>
+</form>
+
+<h3>
+  {comments.length === 1 ? <>1 comment</> : <>{comments.length} comments</>}
+</h3>
+
+{
+  comments.map((c: any) => (
+    <div class="comment">
+      <img
+        width={64}
+        height={64}
+        src={
+          'https://www.gravatar.com/avatar/' + md5(c.email.trim().toLowerCase())
+        }
+      />
+
+      <div class="commentBody">
+        <span class="commentTitle">
+          {c.homepage ? <a href={c.homepage}>{c.name}</a> : c.name}
+          commented at {c.created.substring(0, 10)}
+        </span>
+        <p>{c.text}</p>
+        <span>
+          {debug &&
+            `> ${c.domain} (${c.path} = ${Astro.url.pathname}) by ${c.email}`}
+        </span>
+      </div>
+    </div>
+  ))
+}
+
+<style>
+  form {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--darkContrast);
+  }
+  textarea {
+    width: 100%;
+  }
+  img {
+    margin-right: 1rem;
+  }
+  div.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  div.commentBody {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--darkContrast);
+  }
+  span.commentTitle {
+    color: var(--accent);
+  }
+  span {
+    padding: 0.5rem 0;
+  }
+  a:link,
+  a:visited {
+    color: var(--accentHover);
+    text-decoration-color: var(--accentHover);
+  }
+</style>
