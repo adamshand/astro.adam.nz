@@ -1,0 +1,29 @@
+---
+export function getStaticPaths() {
+  return [
+    {params: {id: 'random'}},
+    {params: {id: '65bo4daaxj400ix'}},
+    {params: {id: 'qu0au6safmjvs2k'}},
+    {params: {id: 'w5mlz39vfbus2hr'}},
+  ];
+}
+
+import Quote from '@/components/Quote.astro'
+import Layout from '@/layouts/Page.astro'
+
+const { id } = Astro.params
+const data = await fetch('https://pb.haume.nz/api/collections/shorts/records/' + id)
+const quote = await data.json()
+---
+
+<Layout>
+  <Quote
+    id={quote.id}
+    text={quote.text}
+    author={quote.creator}
+    note={quote.note}
+    tags={quote.tags}
+  />
+
+  <h3>back to <a href="/quotes/">quotes</a></h3>
+</Layout>

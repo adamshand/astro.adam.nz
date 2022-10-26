@@ -20,17 +20,14 @@ font-family: 'Recursive', sans-serif; */
 html {
   background-color: var(--dark);
   color: var(--light);
-  /* font-size: 20px; */
+  font-size: 20px;
   /* https://zellwk.com/blog/viewport-based-typography/ */
-  font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  /* font-size: calc(112.5% + 4 * (100vw - 600px) / 400); */
   /* https://www.smashingmagazine.com/2016/05/fluid-typography/ */
   /* font-size: calc(8px + (26 - 8) * (100vw - 400px) / (800 - 400)); */
 }
 body {
   font-family: 'Recursive';
-}
-main {
-  width: 66vw;
 }
 a,
 a:link,

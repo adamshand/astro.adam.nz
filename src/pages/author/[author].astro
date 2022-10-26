@@ -2,12 +2,15 @@
 export function getStaticPaths() {
   return [
     {params: {author: 'adam'}},
-    {params: {author: 'Bruce Sterling'}},
-    {params: {author: 'Elenoria'}},
+    {params: {author: 'bruce sterling'}},
+    {params: {author: 'elenoria'}},
   ];
 }
 
+import Layout from '@/layouts/Page.astro'
+
 const { author } = Astro.params
 ---
-
+<Layout>
 <h1>{author}</h1>
+</Layout>

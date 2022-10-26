@@ -1,5 +1,6 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../config'
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/config'
+import Layout from '@/layouts/Page.astro'
 
 type Quote = {
     '@collectionName': string
@@ -10,61 +11,49 @@ type Quote = {
     tags: string[]
 }
 
-import BaseHead from '../../components/BaseHead.astro'
-import Header from '../../components/Header.astro'
-import Footer from '../../components/Footer.astro'
+import BaseHead from '@/components/BaseHead.astro'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
 
-import Quote from '../../components/Quote.astro'
+import Quote from '@/components/Quote.astro'
 
 const data = await fetch(`https://pb.haume.nz/api/collections/shorts/records?filter=(type='quote')&sort=-created`)
 const quotes = await data.json()
-
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
-        <h2>2022</h2>
-        {quotes.items.map((quote: Quote, i: number) => (
-          <div class={i % 2 !== 0 ? 'right' : 'left'}>
-            <Quote
-              author={quote.creator}
-              id={quote.id}
-              note={quote.note}
-              tags={quote.tags}
-              text={quote.text}
-            />
-          </div>
-        ))}
-      </section>
-    </main>
-    <Footer />
-    <style>
-      body {
-        margin: auto;
-        width: 66vw;
-      }
-      h2 {
-        margin-bottom: 1rem;
-        font-size: 1.7rem;
-      }
-      div {
-        margin-bottom: 2rem;
-        color: var(--accent);
-      }
-      div.left {
-        margin-right: 5rem;
-      }
-      div.right {
-        margin-left: 5rem;
-        text-align: right;
-      }
-    </style>
-  </body>
-</html>
+<Layout>
+  <h2>2022</h2>
+  {quotes.items.map((quote: Quote, i: number) => (
+    <div class={i % 2 !== 0 ? 'right' : 'left'}>
+      <Quote
+        id={quote.id}
+        text={quote.text}
+        author={quote.creator}
+        note={quote.note}
+        tags={quote.tags}
+      />
+    </div>
+  ))}
+</Layout>
+
+<style>
+  body {
+    margin: auto;
+    width: 66vw;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+  div {
+    margin-bottom: 2rem;
+    color: var(--accent);
+  }
+  div.left {
+    margin-right: 5rem;
+  }
+  div.right {
+    margin-left: 5rem;
+    text-align: right;
+  }
+</style>
