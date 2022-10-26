@@ -63,34 +63,33 @@ worked, but I couldn’t shake the feeling that I was only treating a symptom. I
 something had caused the psoriasis to appear, then it seemed reasonable to hope
 that something might cure it? After a few months, when the cream ran out, I
 didn’t renew the prescription. I would periodically spend an evening browsing
-the internet attempting to find someone how had figured out how to cure
+the internet attempting to find someone who had figured out how to cure
 psoriasis.
 
-At 35, while travelling, a friend told me about having terrible eczema on his
-hands. He’d resolved it by eating only brown rice until his symptoms went away
-(a couple of weeks). With the symptoms gone, he reintroduced foods one by one
-until he found the culprit (eggs!). This was my introduction to the idea of an
-elimination diet. When I got home, I enlisted my sister (who also has psoriasis)
-and we tried a
+At 35 a friend told me about having terrible eczema on his hands. He’d resolved
+it by eating only brown rice until his symptoms went away (a couple of weeks).
+With the symptoms gone, he reintroduced foods one by one until he found the
+culprit (eggs!). This was my introduction to the idea of an elimination diet.
+When I got home, I enlisted my sister (who also has psoriasis) and we tried a
 [brown rice diet](https://adam.nz/2009/an-exclusion-diet-the-report/). After 10
 days, I almost fainted on a walk. Rather than slowly and carefully reintroducing
 foods, I promptly began to eat everything fat and sweet I could find. I learned
-nothing, but my sister who managed a more sensible staged reintroduction
+nothing, but my sister who managed a more sensible staged reintroduction,
 discovered that milky coffee and nut liquors were triggers.
 
 At 41, I tried the
 <a href="https://www.thepaleomom.com/start-here/the-autoimmune-protocol/">Paleo
 Autoimmune Protocol</a> for a couple of months. My psoriasis mostly disappeared
 in a week and my brain started working again. It was incredible, but slowly as
-the work stress mounted I started to cheat. It started with occasional sugary
+work stress mounted I started to cheat. It started with occasional sugary
 treats, then the coffee came back, and finally beer and pizza after work with
-friends. Later I attempted to replicate the success, but never again managed to
-get the same results with Paleo AIP.
+friends. I attempted to replicate the success months later, but never again
+managed to get the same results with Paleo AIP.
 
 At 44, I went overseas for a few weeks to work on a film set and then catchup
 with old friends. I decided I was going to eat and drink whatever I wanted while
-I was overseas. By the time I got home, I could barely function. I constantly
-smelled awful and was light sensitive, I could barely think straight, and was
+I was overseas. By the time I got home, I could barely function. My body odor
+was weirdly awful, I was light sensitive, I could barely think straight, and was
 atypically moody. It took about six months to get back to something kind of
 normal.
 
@@ -101,17 +100,17 @@ fascinated me. I couldn’t let it go and had to understand why someone would do
 this. I spent the next six months reading and listening to everything I could
 find about the Carnivore Diet.
 
-At 46, with the encouragement of my wife’s herbalist, we decided to try
-Carnivore. She made it about a week, I made it about a month. She quit out of
-boredom after a week (but has stayed on a low-carb diet since, which has
+At 46, with the encouragement of my wife’s herbalist, my wife and I decided to
+try Carnivore. She made it about a week, I made it about a month. She quit out
+of boredom after a week (but has stayed on a low-carb diet since, which has
 drastically improved her energy, mood, and brain fog). I quit because I didn’t
 notice any significant health improvements and my energy and mood was slowly
 tanking. More on this later.
 
 At 47, after six awful months of constant gout and headaches, I had the
 realisation (mentioned above) that I was probably going to be sick forever. I
-wanted to avoid taking the drugs the doctors had to offer, so I came back to
-Carnivore out of desperation.
+still wanted to avoid taking the drugs the doctors had to offer, so I came back
+to Carnivore out of desperation.
 
 ## Carnivore in earnest
 
@@ -145,9 +144,9 @@ my energy levels started to improve.
 
 In retrospect, I think this is what I did wrong the first time I tried
 Carnivore. I didn’t eat enough because I got bored with the food. I didn’t eat
-enough fat (and since I was underweight, I also didn’t have fat stores to burn).
-It also turned out that the “pure pork” sausages I was eating a lot of contained
-rusk, spices, and preservatives.
+enough fat (and since I was underweight, I didn’t have my own fat stores to
+burn). It also turned out that the “pure pork” sausages I was eating a lot of
+contained rusk, spices, and preservatives.
 
 About six months into Carnivore, I had a moment where I suddenly realised that
 “I felt like me” again. I had energy again. The libido of a 30-year-old. My
@@ -184,9 +183,8 @@ following day.
 I’ve had two multi-day headaches, both were from reducing caffeine consumption
 too quickly. I sometimes get headaches as a flu symptom or if I let myself get
 dehydrated. Long periods in air-conditioned spaces like planes seem especially
-bad. I suspect that many of my past headaches have been from reducing caffeine
-too quickly. I’ve tried multi-month stretches without coffee and it never seemed
-to make a difference.
+bad. I suspect that some of my past headaches have been from reducing caffeine
+too quickly.
 
 I discovered that cheese, especially hard cheese, causes constipation. That
 yogurt immediately cases my arthralgia to flare. Milk and cream seem fine
@@ -250,4 +248,5 @@ make travel and eating out **much** easier. In particular, being extremely
 intolerant of chilli is astonishingly limiting. Perhaps this will come with
 time.
 
-_I’m currently trying a gut healing protocol with the support of my doctor._
+_I’m currently trying a gut healing protocol with the support of my doctor.
+Sadly this was a disaster and set me back almost six months. :-(_
