@@ -8,8 +8,8 @@ export function getStaticPaths() {
   ];
 }
 
-import Quote from '@/components/Quote.astro'
 import Layout from '@/layouts/Page.astro'
+import Quote from '@/components/Quote.astro'
 
 const { id } = Astro.params
 const data = await fetch('https://pb.haume.nz/api/collections/shorts/records/' + id)
