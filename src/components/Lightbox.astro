@@ -1,10 +1,9 @@
 ---
-const { caption, file, size = '30%' } = Astro.props
+const { caption, file} = Astro.props
 ---
 
 <a href={`#${file}`}>
   <img class={file} src={file} />
-  <!-- width={size} height={size}  -->
 </a>
 
 <a href="#" class="lightbox" id={file}>
@@ -17,10 +16,9 @@ const { caption, file, size = '30%' } = Astro.props
 <style>
   img {
     width: 22vw;
-    /* width: 32.5%; */
     margin: 0 2px;
-    padding: 7px;
-    border: 1px solid silver; /**/
+    padding: .5vw;
+    border: 1px solid silver; 
   }
   figcaption {
     color: var(--light);
@@ -28,9 +26,7 @@ const { caption, file, size = '30%' } = Astro.props
     text-align: center;
   }
   .lightbox {
-    /* hides until :target gets activated */
-    display: none;
-    /* makes full screen overlay when :target */
+    display: none; /* hides until :target gets activated */
     position: fixed;
     top: 0;
     left: 0;
@@ -41,14 +37,15 @@ const { caption, file, size = '30%' } = Astro.props
   .lightbox:target {
     /*:target means when #first in URL matches an ID. */
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center; /* vertical */
+    justify-content: center;
+    align-items: center;
   }
   .lightbox img {
-    max-height: 95vh;
     max-width: 95vw;
+    max-height: 95vh;
     width: auto;
+    height: 100vh;
     padding: 0.7vw;
-    border: 1px solidn silver; /**/
+    border: 1px solid silver; /**/
   }
 </style>
