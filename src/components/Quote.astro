@@ -5,42 +5,61 @@ import snarkdown from 'snarkdown'
 const { author, id, note, tags, text } = Astro.props
 ---
 
-<div>
-  <a href={`/quotes/${id}`} set:html={snarkdown(text)} />
-</div>
-<br />
-{' — '}
-<a href={`/author/${author.toLowerCase().trim()}`}>{author}</a>
-{
-  note && (
-    <>
-      «<span set:html={snarkdown(note.trim())} />»
-    </>
-  )
-}
-<br />
-{
-  tags.map((tag: any, i: number) => (
-    <>
-      #<a href={`/tag/${tag.toLowerCase().trim()}`}>{tag}</a>
-      {i + 1 < tags.length && <>, </>}
-    </>
-  ))
-}
+<figure class="quote">
+  <blockquote>
+    {id 
+      ? <a href={`/quotes/${id}`} set:html={snarkdown(text)} />
+      : snarkdown(text)
+    }
+  </blockquote>
+
+  <figcaption>
+    <b>&mdash;</b> 
+      <a class="author" href={`/author/${author.trim().toLowerCase()}`}>{author}</a>
+
+    {note && 
+      <>
+        <b>&laquo;</b>
+          <span set:html={snarkdown(note.trim())} />
+        <b>&raquo;</b>
+      </>
+    }
+  
+    {tags.map((tag: any, i: number) => (
+      <span class="tags">
+        <b>#</b><a href={`/tag/${tag.trim().toLowerCase()}`}>{tag}</a>
+      </span>
+    ))}
+  
+  </figcaption>
+</figure>
+
 <style>
-  div {
-    font-size: 1.3rem;
-    font-style: italic;
+  figure {
+    line-height: 1.2;
   }
-  div a,
-  div a:link {
+  figure a:link, figure a:visited {
     color: var(--light);
-    text-decoration: none;
   }
-  div a:hover {
+  figure a:hover {
     color: var(--accentHover);
   }
-  span {
-    color: var(--light);
+  blockquote {
+    margin-left: 0;
+    /* hanging-punctuation: first; /* only supported on Safari :-( */
+  }
+  .hang {
+    margin-left: -1rem;
+  }
+  figcaption {
+    margin-left: 2rem;
+    font-size: 0.7em;
+  }
+  b {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  span.tags {
+    margin-left: .5rem;
   }
 </style>

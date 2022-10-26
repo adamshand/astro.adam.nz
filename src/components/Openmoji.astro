@@ -6,7 +6,9 @@
 // }
 
 const { id, title, size = 48 } = Astro.props
-const moji = `./src/components/openmoji/${id}.svg`
+const moji = `https://openmoji.org/data/color/svg/${id}.svg` // is this bad?  it caches right?
+// const moji = `./src/components/openmoji/${id}.svg` // TODO want to use @ alias, how?
+// import moji from `@/components/openmoji/${id}.svg` // no wookie
 
 // TODO Update to pull emoji from openmoji website directly?
 // <Picture

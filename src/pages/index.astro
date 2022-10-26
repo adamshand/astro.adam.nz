@@ -1,11 +1,7 @@
 ---
-import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
-import HeaderLink from '../components/HeaderLink.astro'
-import Openmoji from '../components/Openmoji.astro'
-import Lightbox from '../components/Lightbox.astro'
-
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import Layout from '@/layouts/Base.astro'
+import Openmoji from '@/components/Openmoji.astro'
+import Lightbox from '@/components/Lightbox.astro'
 
 const images = await Astro.glob(`../../public/images/*/*.jpg`)
 
@@ -16,79 +12,54 @@ function selectRandomMatchingFile(array: any[], filter: string) {
   return selected[Math.floor(Math.random() * selected.length)]
 }
 ---
+<Layout>
+  <nav>
+    <a href="/blog">Writing</a> <b>&middot;</b>
+    <a href="/projects">Projects</a> <b>&middot;</b>
+    <a href="/about">About</a>
+  </nav>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main>
-      <div>
-        <Header title={SITE_TITLE} noIcons />
+  <div>
+    <Lightbox file={selectRandomMatchingFile(images, '/adam/')} />
+    <Lightbox file={selectRandomMatchingFile(images, '/lolz/')} />
+    <Lightbox file={selectRandomMatchingFile(images, '/cute/')} />
+  </div>
 
-        <Lightbox file={selectRandomMatchingFile(images, '/adam/')} />
-        <Lightbox file={selectRandomMatchingFile(images, '/lolz/')} />
-        <Lightbox file={selectRandomMatchingFile(images, '/cute/')} />
+  <p>
+    Some things that interest me (most recent first):
+    <a href="">software development</a>,
+    <a href="/afantasia">afantasia</a>, regenerative agriculture (especially
+    <a href="/syntropy">Syntropic Agroforestry</a>,
+    <a href="">Holistic Management</a>, and
+    <a href="/permaculture">Permaculture</a>),
+    <a href="">management & leadership</a>,
+    <a href="">Nonviolent Communication</a>,
+    <a href="">Vipassanā</a>,
+    <a href="/tags/eating">food as medicine</a>,
+    <a href="/tags/nerding">open source</a>, and
+    <a href="/tags/writing">writing</a>.
+    <br />
+    <a href="https://github.com/adamshand/" target="_blank">
+      <Openmoji id="E045" /></a>
+    <a href="https://www.linkedin.com/in/adamshand/" target="_blank">
+      <Openmoji id="E046" /></a>
+  </p>
+</Layout>
 
-        <p>
-          Some things that interest me (most recent first):
-          <a href="">software development</a>,
-          <a href="/afantasia">afantasia</a>, regenerative agriculture
-          (especially
-          <a href="/syntropy">Syntropic Agroforestry</a>,
-          <a href="">Holistic Management</a>, and
-          <a href="/permaculture">Permaculture</a>),
-          <a href="">management & leadership</a>,
-          <a href="">Nonviolent Communication</a>,
-          <a href="">Vipassanā</a>,
-          <a href="/tags/eating">food as medicine</a>,
-          <a href="/tags/nerding">open source</a>, and
-          <a href="/tags/writing">writing</a>.
-        </p>
-        <p>
-          <HeaderLink href="https://github.com/adamshand/" target="_blank">
-            <Openmoji id="E045" />
-          </HeaderLink>
-          <HeaderLink
-            href="https://www.linkedin.com/in/adamshand/"
-            target="_blank"
-          >
-            <Openmoji id="E046" />
-          </HeaderLink>
-        </p>
-      </div>
-    </main>
-
-    <style>
-      html,
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 99%;
-        margin: 0;
-        padding: 0;
-      }
-      div {
-        width: 83vw;
-        margin-top: -17vh;
-      }
-      p {
-        margin: 1rem 11rem;
-        text-align: center;
-        font-size: 1.3rem;
-        font-weight: 400;
-      }
-      a:link,
-      a:visited {
-        text-decoration: none;
-        color: var(--accent);
-      }
-      a:hover,
-      a:active {
-        color: var(--accentDark);
-      }
-    </style>
-  </body>
-</html>
+<style>
+  nav {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  nav a {
+    padding-right: 
+  }
+  p {
+    margin: 1rem 11rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+</style>

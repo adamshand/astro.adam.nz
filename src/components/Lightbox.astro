@@ -1,22 +1,23 @@
 ---
-const { file, caption } = Astro.props
+const { caption, file, size = '30%' } = Astro.props
 ---
 
 <a href={`#${file}`}>
   <img class={file} src={file} />
+  <!-- width={size} height={size}  -->
 </a>
 
 <a href="#" class="lightbox" id={file}>
   <figure>
-    <img alt="" width={512} height={512} class={file} src={file} />
+    <img alt="" class={file} src={file} />
     <figcaption>{caption}</figcaption>
   </figure>
 </a>
 
 <style>
   img {
-    /* width: 26vw; */
-    width: 32.5%;
+    width: 22vw;
+    /* width: 32.5%; */
     margin: 0 2px;
     padding: 7px;
     border: 1px solid silver; /**/
@@ -44,7 +45,8 @@ const { file, caption } = Astro.props
     align-items: center; /* vertical */
   }
   .lightbox img {
-    height: 66vh;
+    max-height: 95vh;
+    max-width: 95vw;
     width: auto;
     padding: 0.7vw;
     border: 1px solidn silver; /**/

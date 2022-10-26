@@ -1,43 +1,20 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/config'
-import BaseHead from '@/components/BaseHead.astro';
-const year = new Date().getFullYear()
-
+import Layout from '@/layouts/Base.astro'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog">Posts</a>
-      <a href="/about">About</a>
-      <a href="/quotes">Quotes</a>
-    </nav>
-    <main>
-      <slot /> 
-    </main>
-    <footer>
-      <div>&hearts; <a href="https://copyheart.org/">Copyheart</a> {year}, sharing is an act of love.</div>
-    </footer>
-    </body>
-</html>
+<Layout>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog">Posts</a>
+    <a href="/about">About</a>
+    <a href="/quotes">Quotes</a>
+  </nav>
+  <main>
+    <slot /> 
+  </main>
+</Layout>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    min-height: 99vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    /* border: 1px solid yellow; */
-  }
   nav {
     width: 100%;
     padding: .5rem;
@@ -55,9 +32,7 @@ const year = new Date().getFullYear()
   main {
     flex: 1; /* force main to fill all vertical space */
     max-width: 62ch;
+    margin-top: 2rem;
     /* border: 1px solid teal; */
-  }
-  footer {
-    margin: 1rem auto;
   }
 </style>
