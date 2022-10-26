@@ -1,0 +1,33 @@
+---
+import Layout from '@/layouts/Page.astro'
+const projects = [
+{
+    name: 'The Wireless Commons',
+    year: '2003',
+    description: 'blah blah blah',
+    image: '',
+    url: ''
+  },
+  {
+    name: 'Earthlight Communications',
+    year: '1994',
+    description: 'blah blah blah',
+    image: '',
+    url: ''
+  }
+]
+---
+
+<Layout>
+  <h1>Projects</h1>
+
+  {projects.map(p => 
+    <h2>{p.name}</h2>
+    <>Year: {p.year}</>
+    <p>{p.description}</p>
+    <a href={p.url}>More ...</a>
+  )}
+</Layout>
+
+<style>
+</style>
