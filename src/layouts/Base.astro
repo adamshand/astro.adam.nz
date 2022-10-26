@@ -1,0 +1,36 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/config'
+import BaseHead from '@/components/BaseHead.astro';
+const year = new Date().getFullYear()
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <slot /> 
+    
+    <footer>
+      <div>&hearts; <a href="https://copyheart.org/">Copyheart</a> {year}, sharing is an act of love.</div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    /* border: 1px solid yellow; */
+  }
+  footer {
+    margin: 1rem auto;
+  }
+</style>
