@@ -1,0 +1,32 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+  <nav>
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink href="/projects">Projects</HeaderLink>
+    <HeaderLink href="/about">About</HeaderLink>
+	</nav>
+</header>
+
+<style>
+	nav {
+    width: 100vw;
+    padding-top: .7rem;
+    background-color: var(--darkContrast);
+    /* border-bottom: 1px solid var(--accent); */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  nav a:link, nav a:visited {
+    color: var(--light);
+    padding-right: 1rem;
+  }
+  nav a:hover {
+    color: var(--accent);
+  }
+
+</style>
