@@ -1,0 +1,58 @@
+---
+import snarkdown from 'snarkdown'
+import Box from '@/components/Box.astro'
+
+interface Props {
+  name: string;
+  start: number,
+  end?: number,
+  blurb: string,
+  description: string,
+  image: string,
+  url?: string
+}
+
+const { name, start, end, blurb, description, image = '', url } = Astro.props 
+---
+
+<a href={url}>
+  <div class="wrapper">
+    <img src={image} />
+    <div class="details">
+      <h3>{name}</h3>
+      <p set:html={snarkdown(blurb)} />
+      <p class="year">{end ? <span>From {start} to {end}</span> : <span>Since {start}</span>}</p>
+    </div>
+  </div>
+</a>
+
+<style>
+  .wrapper {
+    width: 23vw;
+    border: 1px solid silver;
+    /* box-shadow: 5px -5px var(--accent); */
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+
+    /* width: 22vw;
+    height: 22vw; */
+  }
+  .details {
+    padding: 0 .5rem;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    font-weight: 200;
+    color: var(--light);
+    hyphens: auto;
+  }
+  .year {
+    text-align: center;
+    font-style: italic;
+  }
+</style>
+

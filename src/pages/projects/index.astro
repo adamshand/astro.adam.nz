@@ -1,33 +1,46 @@
 ---
-import Layout from '@/layouts/Page.astro'
-const projects = [
-{
-    name: 'The Wireless Commons',
-    year: '2003',
-    description: 'blah blah blah',
-    image: '',
-    url: ''
-  },
-  {
-    name: 'Earthlight Communications',
-    year: '1994',
-    description: 'blah blah blah',
-    image: '',
-    url: ''
-  }
-]
+import Layout from '@/layouts/Base.astro'
+
+import Header from '@/components/Header.astro'
+import Project from '@/components/Project.astro'
+import projects from './projects.json'
+
+// strag, ptp, dreamcatcher, ma, garden magic, quotes, library, recipes, vade, wireless commons, syntropy, 
+// the bad day, mens group, wordup, Survival Guide, Shmoo Group
 ---
 
 <Layout>
-  <h1>Projects</h1>
+  <Header />
 
-  {projects.map(p => 
-    <h2>{p.name}</h2>
-    <>Year: {p.year}</>
-    <p>{p.description}</p>
-    <a href={p.url}>More ...</a>
-  )}
+  <div>
+    <h2>Current Projects</h2>
+      {projects
+        .filter(x => x.end === null)
+        .sort((a,b) => a.start < b.start ? 1 : -1)
+        .map(p => 
+        <Project name={p.name} start={p.start} end={p.end} blurb={p.blurb} description={p.description} image={p.image} url={p.url} />
+      )}
+    <h2>Past Projects</h2>
+    {projects
+      .filter(x => x.end !== null)
+      .sort((a,b) => a.start < b.start ? 1 : -1)
+      .map(p => 
+      <Project name={p.name} start={p.start} end={p.end} blurb={p.blurb} description={p.description} image={p.image} url={p.url} />
+    )}
+  </div>
 </Layout>
 
 <style>
+  div {
+    width: 93vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .4vw;
+    justify-content: center;
+  }
+  h2 {
+    width: 100vw;
+    text-align: center;
+  }
 </style>

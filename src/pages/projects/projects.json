@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Earthlight Communications",
+    "start": 1994,
+    "end": 1997,
+    "blurb": "",
+    "description": "blah blah blah",
+    "image": "https://doku.adam.nz/_media/project/earthlight.jpg?w=200&tok=2aea6f",
+    "url": "http://adam.nz"
+  },
+  {
+    "name": "Personal Telco Project",
+    "start": 2000,
+    "end": 2003,
+    "blurb": "F*ck the telcos, let's build it ourselves.  Nerd idealism at it's finest.",
+    "description": " Personal Telco is a volunteer-based nonprofit which promotes and builds free wireless networks and hotspots in the Portland (Oregon) metropolitan area. I instigated it in 2000 and provided leadership and technical vision for a group of 50 volunteers until I left Portland in 2003. During that time I worked with the city council, neighbourhood communities and local businesses to get support and funding for the project and I spent significant time working with local and nationwide media.",
+    "image": "/projects/personaltelco.png",
+    "url": "https://personaltelco.net"
+  },
+  {
+    "name": "Wireless Commons Manifesto",
+    "start": 2003,
+    "end": 2003,
+    "blurb": "Everyone's gotta write a manifesto once in their lives. Right? 👊",
+    "description": "blah blah blah",
+    "image": "/projects/adamroof.jpg",
+    "url": "http://adam.nz/wireless-commons/"
+  },
+  {
+    "name": "The Bad Day",
+    "start": 2012,
+    "end": 2014,
+    "blurb": "Follow Clarence through his adventures as he tries everything he can to cheer himself up.",
+    "description": "The Bad Day is written and illustrated by my sister Amy Shand.  Initially, Amy made each copy by hand, but more people wanted copies than she could make. I ended up helping by creating a digital layout and finding a local printer who could create a beautiful and affordable book. ",
+    "image": "https://assets.bigcartel.com/product_images/249382655/the_bad_day-cover.png?auto=format&fit=max&w=512",
+    "url": "https://www.amyherself.nz/product/the-bad-day"
+  },
+  {
+    "name": "Dream Catcher Coop",
+    "start": 2014,
+    "end": 2015,
+    "blurb": " I was one of the initial members and worked with the board.",
+    "description": " The Dream Catcher Co-op is nonprofit community food co-operative based in Te Horo on the Kāpiti Coast. We are a young group established in 2014 with a vision of providing affordable, organic and locally grown food to the Kāpiti region. ",
+    "image": "http://dreamcatchercoop.org//wp-content/uploads/dreamcatcher-logo2.png",
+    "url": "http://dreamcatchercoop.org/"
+  },
+  {
+    "name": "Wellington Mens Group",
+    "start": 2013,
+    "end": 2018,
+    "blurb": " I was a facilitator and a regular participant of the group.  Fabulous!",
+    "description": " Wellington Men’s Group provides a space where men can come and share in confidence. A circle of trust, of men who are dedicated to becoming their best in all aspects of life.",
+    "image": "/projects/fire.png",
+    "url": "https://www.facebook.com/groups/MensGroupWgtn/"
+  },
+  {
+    "name": "Managers Anonymous",
+    "start": 2013,
+    "end": null,
+    "blurb": "I jokingly call it group therapy for managers.",
+    "description": "Managers Anonymous provides a long-term, practical support group for managers of all shapes and sizes. Many management groups focus on networking and theoretical strategies. Instead, we provide an informal group where managers can get focused support for the daily challenges they face in their jobs. Being a skilled manager can be hard work, but it doesn't have to be complicated. If you are interested in learning with a like-minded group, we'd like to hear your stories.",
+    "image": "/projects/tinyship.jpg",
+    "url": "#"
+  },
+  {
+    "name": "Gardening Magic",
+    "start": 2022,
+    "end": null,
+    "blurb": "Half-day introductions to food gardening with a permaculture twist.",
+    "description": "Instigated by my friend [Phil](https://philtownshend.com/) and assisted by [Tink](https://tink.nz).",
+    "image": "/projects/gardenmagic.jpg",
+    "url": "#"
+  }
+]
