@@ -21,9 +21,11 @@ const year = new Date().getFullYear()
 <style>
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
-    min-height: 99vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -31,7 +33,14 @@ const year = new Date().getFullYear()
     /* border: 1px solid yellow; */
   }
   footer {
-    margin: .8rem auto;
+    display: block;
+    width: 100vw;
+    margin-top: 1rem;
+    padding: .5rem;
+    /* border-top: 3px solid var(--accent); */
+    background-color: var(--darkContrast);
+    text-align: center;
+    font-size: .8rem;
     font-weight: 200;
   }
 </style>

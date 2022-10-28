@@ -2,7 +2,7 @@
 layout: '@/layouts/Blog.astro'
 title: Making and Breaking
 author: Adam Shand
-pubDate: 11 July 2020
+date: 11 July 2020
 ---
 
 I don’t often get angry online, the mere thought of it seems fruitless and feels

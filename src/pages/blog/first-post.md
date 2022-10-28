@@ -1,9 +1,11 @@
 ---
 layout: '@/layouts/Blog.astro'
-title: 'First post'
+title:
+  'First post, this is longer just to see what happens and even longer and
+  longer.'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2020'
-updatedDate: 'October 22 2022'
+date: 'Jul 08 2020'
+updated: 'October 22 2022'
 heroImage: '/placeholder-hero.jpg'
 ---
 
